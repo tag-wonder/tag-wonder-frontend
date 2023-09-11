@@ -1,6 +1,9 @@
+import Layout from '../components/Layout';
+
 import { miSaengFont } from './fonts';
 
-import './globals.css';
+import 'src/styles/normalize.css';
+import 'src/styles/global.scss';
 
 export const metadata = {
   title: 'Create Next App',
@@ -12,7 +15,11 @@ function RootLayout({ children }: {
 }) {
   return (
     <html lang="ko" className={miSaengFont.className}>
-      <body>{children}</body>
+      <body>
+        <Layout>
+          {children}
+        </Layout>
+      </body>
     </html>
   );
 }

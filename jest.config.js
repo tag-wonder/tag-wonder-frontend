@@ -29,4 +29,7 @@ module.exports = async () => ({
   transformIgnorePatterns: [
     // add your transform ignore patterns..
   ],
+  moduleNameMapper: {
+    '@/(.*)': '<rootDir>/src/$1',
+  },
 });

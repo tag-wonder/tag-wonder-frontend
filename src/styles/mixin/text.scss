@@ -1,0 +1,21 @@
+@import "./functions.scss";
+
+@mixin text($font, $color-code: "") {
+  @if $font == "Headline" {
+    font-size: var(--headline-font-size);
+    line-height: var(--headline-line-height);
+    font-weight: var(--headline-font-weight);
+  } @else if $font == "Body" {
+    font-size: var(--body-font-size);
+    line-height: var(--body-line-height);
+    font-weight: var(--body-font-weight);
+  }
+
+  @if $color-code {
+    color: color($color-code);
+  }
+}
+
+@mixin text-color($color-code) {
+  color: color($color-code);
+}
