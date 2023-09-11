@@ -3,7 +3,7 @@ import localFont from 'next/font/local';
 export const samliphopangcheFont = localFont({
   src: [
     {
-      path: './SDSamliphopangcheBasic.otf',
+      path: './SDSamliphopangcheBasic.woff2',
       weight: '400',
       style: 'normal',
     },
@@ -30,7 +30,7 @@ export const samliphopangcheFont = localFont({
 export const miSaengFont = localFont({
   src: [
     {
-      path: './SDMiSaeng.ttf',
+      path: './SDMiSaeng.woff2',
       weight: '400',
       style: 'normal',
     },
@@ -57,7 +57,7 @@ export const miSaengFont = localFont({
 export const hSYujiFont = localFont({
   src: [
     {
-      path: './HSYuji.otf',
+      path: './HSYuji.woff2',
       weight: '400',
       style: 'normal',
     },
