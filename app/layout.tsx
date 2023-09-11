@@ -1,3 +1,5 @@
+import { miSaengFont } from './fonts';
+
 import './globals.css';
 
 export const metadata = {
@@ -9,7 +11,7 @@ function RootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={miSaengFont.className}>
       <body>{children}</body>
     </html>
   );
