@@ -1,0 +1,55 @@
+@import "/src/styles/main.scss";
+@import "/src/styles/variables";
+
+.layoutWrapper {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #006B3E;
+}
+
+.contentBox {
+  height: auto;
+  width: auto;
+  max-width: var(--breakpoint-desktop);
+  min-height: calc(var(--vh, 1vh) * 100);
+  position: relative;
+  background-color: color("white/default");
+  margin: 0 auto;
+  padding: 0;
+
+  &::before {
+    z-index: 100;
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid #d2c6c6;
+  }
+
+  &::after {
+    z-index: 100;
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-right: 1px solid #d2c6c6;
+  }
+
+  @include desktop {
+    width: 100%;
+    max-width: initial;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+}
