@@ -1,12 +1,14 @@
 import Image from 'next/image';
 
+import { hSYujiFont, samliphopangcheFont } from './fonts';
+
 import styles from './page.module.css';
 
 function Home() {
   return (
     <main className={styles.main}>
       <div className={styles.description}>
-        <p>
+        <p className={samliphopangcheFont.className}>
           Get started by editing&nbsp;
           <code className={styles.code}>app/page.tsx</code>
         </p>
@@ -15,6 +17,7 @@ function Home() {
             href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
             target="_blank"
             rel="noopener noreferrer"
+            className={hSYujiFont.className}
           >
             By
             {' '}

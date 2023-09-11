@@ -27,12 +27,12 @@
   },
   "homepage": "https://github.com/team-has/unnamed#readme",
   "dependencies": {
-    "next": "^13.4.13",
+    "next": "^13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^13.4.13",
+    "@next/eslint-plugin-next": "^13.4.19",
     "@nf-team/eslint-config": "^2.0.2",
     "@testing-library/jest-dom": "^6.0.0",
     "@testing-library/react": "^14.0.0",
