@@ -1,12 +1,48 @@
 @import "./mixin/text.scss";
 
+:root {
+  /* Default */
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Primary */
+  --primary-01: #074a2e;
+  --primary-02: #006b3e;
+  --primary-03: #39936d;
+  --primary-04: #00c271;
+  --primary-05: #00d17a;
+  --primary-06: #05ff97;
+  --primary-07: #38ffac;
+  --primary-08: #6bffc1;
+  --primary-09: #9effd7;
+
+  /* Grey */
+  --grey-01: #303131;
+  --grey-02: #484b4a;
+  --grey-03: #606664;
+  --grey-04: #78827e;
+  --grey-05: #919c97;
+  --grey-06: #abb5b1;
+  --grey-07: #c6cdca;
+  --grey-08: #e0e5e3;
+  --grey-09: #fdfdfd;
+
+  /* Memo */
+  --memo-bg: #fcfbf7;
+  --memo-pink: #fd7171;
+  --memo-orange: #f87a41;
+  --memo-brown: #c2804e;
+  --memo-yellow: #ffc133;
+  --memo-mint: #5be6bd;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  color: #FFFFFF;
+  color: color("white");
 }
 
 * {
