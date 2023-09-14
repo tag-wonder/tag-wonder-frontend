@@ -1,0 +1,55 @@
+@import "/src/styles/main.scss";
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+
+  .titleWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    border-top: 1px solid color("primary/09");
+    border-bottom: 1px solid color("primary/09");
+
+    .dividerLeft {
+      padding-left: 1.37rem;
+      border-right: 1px solid color("primary/09");
+    }
+
+    .title {
+      width: 100%;
+      text-align: center;
+      padding: 1.31rem 0 1.06rem 0;
+      color: color("grey/09");
+
+      // TODO - 폰트 정의 후 변경
+      font-size: 2.875rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.14375rem;
+    }
+
+    .dividerRight {
+      padding-left: 1.37rem;
+      border-left: 1px solid color("primary/09");
+    }
+  }
+
+  .subTitle {
+    width: 100%;
+    text-align: center;
+    padding: 1.06rem 0 0.88rem 0;
+    border-bottom: 1px solid color("primary/09");
+
+    // TODO - 폰트 정의 후 변경
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.05625rem;
+  }
+}

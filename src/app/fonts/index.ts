@@ -1,6 +1,6 @@
 import localFont from 'next/font/local';
 
-export const samliphopangcheFont = localFont({
+const samliphopangche = localFont({
   src: [
     {
       path: './SDSamliphopangcheBasic.woff2',
@@ -27,7 +27,7 @@ export const samliphopangcheFont = localFont({
   ],
 });
 
-export const miSaengFont = localFont({
+const miSaeng = localFont({
   src: [
     {
       path: './SDMiSaeng.woff2',
@@ -54,7 +54,7 @@ export const miSaengFont = localFont({
   ],
 });
 
-export const hSYujiFont = localFont({
+const hSYuji = localFont({
   src: [
     {
       path: './HSYuji.woff2',
@@ -80,3 +80,9 @@ export const hSYujiFont = localFont({
     'sans-serif',
   ],
 });
+
+export default {
+  miSaeng: miSaeng.className,
+  hSYuji: hSYuji.className,
+  samliphopangche: samliphopangche.className,
+};

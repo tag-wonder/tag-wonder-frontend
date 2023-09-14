@@ -1,6 +1,6 @@
-import Layout from '../components/Layout';
+import Layout from '@/components/global/Layout';
 
-import { miSaengFont } from './fonts';
+import fonts from './fonts';
 
 import 'src/styles/normalize.css';
 import 'src/styles/global.scss';
@@ -14,7 +14,7 @@ function RootLayout({ children }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="ko" className={miSaengFont.className}>
+    <html lang="ko" className={fonts.miSaeng}>
       <body>
         <Layout>
           {children}
