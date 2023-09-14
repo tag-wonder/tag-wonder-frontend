@@ -4,7 +4,8 @@
   padding-top: 2.5rem;
 
   .contents {
-    height: 100%;
+    height: calc((var(--vh, 1vh) * 100) - 700px);
+    min-height: 200px;
   }
 
   .backgroundImageWrapper {
