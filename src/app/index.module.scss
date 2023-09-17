@@ -3,12 +3,12 @@
 .main {
   padding-top: 2.5rem;
 
-  .contents {
+  .formWrapper {
     height: calc((var(--vh, 1vh) * 100) - 700px);
     min-height: 200px;
   }
 
-  .backgroundImageWrapper {
+  .tagContentsWrapper {
     position: relative;
     min-height: 31.9375rem;
     height: 100%;

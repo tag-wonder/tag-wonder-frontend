@@ -1,11 +1,13 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import {
-  ButtonHTMLAttributes, HTMLProps, memo, PropsWithChildren, ReactElement,
+  ButtonHTMLAttributes, HTMLProps, memo, PropsWithChildren, ReactElement, ReactNode,
 } from 'react';
 
 import Link from 'next/link';
 
 import clsx from 'clsx';
+
+import fonts from '@/app/fonts';
 
 import styles from './index.module.scss';
 
@@ -15,6 +17,7 @@ interface Props extends Omit<HTMLProps<HTMLButtonElement | HTMLAnchorElement>, '
   buttonType?: ButtonType;
   width?: `${number}px`;
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
+  prefixIcon?: ReactNode;
 }
 
 function Button({
@@ -23,13 +26,14 @@ function Button({
   disabled,
   width,
   buttonType = 'primary',
+  prefixIcon,
   className,
   children,
   ...rest
 }: PropsWithChildren<Props>): ReactElement {
   const htmlProps = rest as any;
 
-  const buttonClassName = clsx(styles.buttonWrapper, {
+  const buttonClassName = clsx(fonts.samliphopangche, styles.buttonWrapper, {
     [styles[buttonType]]: buttonType,
   }, className);
 
@@ -37,7 +41,8 @@ function Button({
     return (
       <Link
         href={href}
-        className={buttonClassName}
+        className={clsx(buttonClassName, disabled && styles.disabled)}
+        aria-disabled={disabled}
         style={{
           width,
         }}
@@ -59,6 +64,9 @@ function Button({
       }}
       {...htmlProps}
     >
+      {prefixIcon && (
+        <div className={styles.prefixIconWrapper}>{prefixIcon}</div>
+      )}
       {children}
     </button>
   );

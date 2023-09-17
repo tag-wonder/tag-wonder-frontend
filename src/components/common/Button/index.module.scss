@@ -1,10 +1,10 @@
 @import "/src/styles/main.scss";
 
 .buttonWrapper {
-  @include text("Body");
   position: relative;
   transform: translate(0, 0);
   user-select: none;
+  margin: 0 auto;
   overflow: hidden;
   transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out,
     border-color 0.1s ease-in-out, opacity 0.1s ease-in-out;
@@ -14,55 +14,58 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 5px 1rem 7px 1rem;
-  border: 2px solid;
-  width: 100%;
+  border-radius: 0.25rem;
+  width: calc(100% - 3rem);
+  padding: 0.875rem 2rem;
+  height: 3.75rem;
 
-  &:disabled {
-    color: color("scale-gray-700");
-    background-color: color("scale-gray-500");
-    border-top-color: color("scale-white");
-    border-left-color: color("scale-white");
-    border-bottom-color: color("scale-gray-700");
-    border-right-color: color("scale-gray-700");
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.06875rem;
+
+  &::after {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.25rem;
   }
 
-  &:not(:disabled):not(.disabled):active {
-    &.primary {
-      color: color("scale-cyan-300");
-      background-color: color("scale-cyan-700");
-      border-bottom-color: color("scale-white");
-      border-right-color: color("scale-white");
-      border-top-color: color("scale-cyan-800");
-      border-left-color: color("scale-cyan-800");
-    }
+  &:not(:disabled):not(.disabled):after {
+    opacity: 0;
+  }
 
-    &.secondary {
-      color: color("scale-yellow");
-      background-color: color("scale-gray-600");
-      border-bottom-color: color("scale-white");
-      border-right-color: color("scale-white");
-      border-top-color: color("scale-gray-800");
-      border-left-color: color("scale-gray-800");
-    }
+  &:disabled,
+  &.disabled {
+    cursor: not-allowed;
+    color: color("grey/09");
+    background-color: color("grey/07");
+    border: none;
+  }
+
+  &:not(:disabled):not(.disabled):active:after {
+    background-color: color("black");
+    opacity: 0.08;
   }
 
   &:not(:disabled):not(.disabled) {
-    border-top-color: color("scale-white");
-    border-left-color: color("scale-white");
-
     &.primary {
-      color: color("scale-white");
-      background-color: color("scale-cyan-600");
-      border-bottom-color: color("scale-cyan-800");
-      border-right-color: color("scale-cyan-800");
+      color: color("grey/09");
+      background-color: color("primary/04");
+      border: none;
     }
 
     &.secondary {
-      color: color("scale-gray-900");
-      background-color: color("scale-gray-500");
-      border-bottom-color: color("scale-gray-800");
-      border-right-color: color("scale-gray-800");
+      color: color("grey/09");
+      background-color: color("primary/02");
+      border: 1.5px solid color("primary/04");
     }
+  }
+
+  .prefixIconWrapper {
+    position: absolute;
+    display: inline-flex;
+    left: 1rem;
   }
 }
