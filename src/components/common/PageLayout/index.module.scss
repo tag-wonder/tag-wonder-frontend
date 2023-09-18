@@ -1,0 +1,30 @@
+@import "/src/styles/main.scss";
+
+.main {
+  padding-top: 2.5rem;
+
+  .formWrapper {
+    height: calc((var(--vh, 1vh) * 100) - 700px);
+    min-height: 200px;
+  }
+
+  .tagContentsWrapper {
+    position: relative;
+    min-height: 31.9375rem;
+    height: 100%;
+    width: 100%;
+    bottom: 0px;
+    max-width: 450px;
+
+    .backgroundImage {
+      position: absolute;
+      object-fit: cover;
+      object-position: bottom;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: block;
+    }
+  }
+}

@@ -1,28 +1,18 @@
-import Image from 'next/image';
-
-import TitleSection from '@/components/common/TitleSection';
-import SocialButtonGroup from '@/components/login/SocialButtonGroup';
+import Button from '@/components/common/Button';
+import PageLayout from '@/components/common/PageLayout';
 
 import styles from './index.module.scss';
 
-function Home() {
+function HomePage() {
   return (
-    <main className={styles.main}>
-      <TitleSection subTitle="친구들이 생각하는 나는 어떨지 태그로 같이 알아볼래?" />
-      <div className={styles.formWrapper} />
-      <div className={styles.tagContentsWrapper}>
-        <Image
-          src="/assets/images/board-background.png"
-          alt="board-background-image"
-          fill
-          priority
-          quality={100}
-          className={styles.backgroundImage}
-        />
-        <SocialButtonGroup />
+    <PageLayout subTitle="이름 등록하고 내 칠판을 캡쳐해서 친구들한테 공유해봐!">
+      <div className={styles.buttonWrapper}>
+        <Button type="button">
+          칠판 만들기
+        </Button>
       </div>
-    </main>
+    </PageLayout>
   );
 }
 
-export default Home;
+export default HomePage;
