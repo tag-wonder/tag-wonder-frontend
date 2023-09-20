@@ -1,17 +1,30 @@
-import { ChangeEvent, useState } from 'react';
+import { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
-function Input() {
-  const [value, setValue] = useState<string>();
+import clsx from 'clsx';
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
+import fonts from '@/app/fonts';
 
+import styles from './index.module.scss';
+
+interface Props extends DetailedHTMLProps<
+InputHTMLAttributes<HTMLInputElement>, HTMLInputElement
+> {
+  id: string;
+  labelText: string;
+}
+
+function Input({
+  id, labelText, className, ...rest
+}: Props) {
   return (
-    <div>
-      <label htmlFor="id">
-        <input type="text" value={value} onChange={handleChange} />
-      </label>
+    <div className={styles.inputWrapper}>
+      <label className={clsx(fonts.samliphopangche, styles.label)} htmlFor={id}>{labelText}</label>
+      <input
+        className={clsx(fonts.hSYuji, styles.input, className)}
+        id={id}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...rest}
+      />
     </div>
   );
 }

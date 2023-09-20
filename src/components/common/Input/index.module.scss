@@ -1,1 +1,44 @@
 @import "/src/styles/main.scss";
+
+.inputWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 0.25rem;
+  background-color: color("memo/bg");
+  height: 3.69rem;
+
+  .label {
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.06875rem;
+    text-align: center;
+    padding: 1.19rem 1.19rem 1.12rem 1.25rem;
+    color: color("primary/02");
+    overflow: hidden;
+    border-right: 1px dashed color("primary/02");
+    min-width: fit-content;
+  }
+
+  .input {
+    outline: none;
+    width: 100%;
+    border: none;
+    text-align: center;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.0625rem;
+    color: color("primary/02");
+    background-color: color("memo/bg");
+    overflow: hidden;
+    padding: 0 0.5rem;
+
+    &::placeholder {
+      color: color("grey/08");
+    }
+  }
+}
