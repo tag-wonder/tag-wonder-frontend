@@ -1,14 +1,34 @@
 @import "./functions.scss";
 
 @mixin text($font, $color-code: "") {
-  @if $font == "Headline" {
-    font-size: var(--headline-font-size);
-    line-height: var(--headline-line-height);
-    font-weight: var(--headline-font-weight);
-  } @else if $font == "Body" {
-    font-size: var(--body-font-size);
-    line-height: var(--body-line-height);
-    font-weight: var(--body-font-weight);
+  @if $font == "Samlip/Heading1" {
+    font-size: var(--samlip-heading1-font-size);
+    line-height: var(--samlip-heading1-line-height);
+    font-weight: var(--font-weight-regular);
+  } @else if $font == "Samlip/Heading2" {
+    font-size: var(--samlip-heading2-font-size);
+    line-height: var(--samlip-heading2-height);
+    font-weight: var(--font-weight-regular);
+  } @else if $font == "Samlip/Title1" {
+    font-size: var(--samlip-title1-font-size);
+    line-height: var(--samlip-title1-line-height);
+    font-weight: var(--font-weight-regular);
+  } @else if $font == "Samlip/Title2" {
+    font-size: var(--samlip-title2-font-size);
+    line-height: var(--samlip-title2-line-height);
+    font-weight: var(--font-weight-regular);
+  } @else if $font == "HS/Heading1" {
+    font-size: var(--hs-heading1-font-size);
+    line-height: var(--hs-heading1-line-height);
+    font-weight: var(--font-weight-regular);
+  } @else if $font == "HS/Heading2" {
+    font-size: var(--hs-heading2-font-size);
+    line-height: var(--hs-heading2-line-height);
+    font-weight: var(--font-weight-regular);
+  } @else if $font == "Misaeng/Body1" {
+    font-size: var(--misaeng-body1-font-size);
+    line-height: var(--misaeng-body1-line-height);
+    font-weight: var(--font-weight-regular);
   }
 
   @if $color-code {

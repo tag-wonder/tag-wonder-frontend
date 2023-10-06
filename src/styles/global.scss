@@ -36,6 +36,27 @@
   --memo-mint: #5be6bd;
 }
 
+:root {
+  --font-weight-bold: bold;
+  --font-weight-semibold: 600;
+  --font-weight-medium: 500;
+  --font-weight-regular: normal;
+  --samlip-heading1-font-size: 2.875rem;
+  --samlip-heading1-line-height: 4.375rem;
+  --samlip-heading2-font-size: 1.375rem;
+  --samlip-heading2-line-height: 2.125rem;
+  --samlip-title1-font-size: 1.125rem;
+  --samlip-title1-line-height: 1.75rem;
+  --samlip-title2-font-size: 1rem;
+  --samlip-title2-line-height: 1.5rem;
+  --hs-heading1-font-size: 1.5rem;
+  --hs-heading1-line-height: 2.25rem;
+  --hs-heading2-font-size: 1.25rem;
+  --hs-heading2-line-height: 1.875rem;
+  --misaeng-body1-font-size: 1.5rem;
+  --misaeng-body1-line-height: 2.25rem;
+}
+
 html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -63,7 +84,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0px;
+  margin: 0;
 }
 
 div,
