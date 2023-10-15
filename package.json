@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/team-has/unnamed#readme",
   "dependencies": {
+    "@nf-team/core": "^2.0.1",
     "@nf-team/react": "^2.3.0",
     "clsx": "^2.0.0",
     "next": "^13.5.2",
@@ -36,7 +37,8 @@
   "devDependencies": {
     "@next/eslint-plugin-next": "^13.5.2",
     "@nf-team/eslint-config": "^2.0.2",
-    "@testing-library/jest-dom": "^6.0.0",
+    "@svgr/webpack": "^8.1.0",
+    "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",
     "@types/jest-plugin-context": "^2",
@@ -44,7 +46,6 @@
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
     "@types/react-test-renderer": "^18.0.0",
-    "@types/testing-library__jest-dom": "^5.14.5",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
     "cypress": "^12.1.0",

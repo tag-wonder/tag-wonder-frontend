@@ -1,0 +1,52 @@
+@import "/src/styles/main.scss";
+
+.boardWrapper {
+  position: relative;
+  min-width: 100px;
+  width: 100%;
+
+  .headerBar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -17px;
+
+    .orange > path {
+      fill: color("memo/orange");
+    }
+
+    .primary > path {
+      fill: color("primary/05");
+    }
+
+    .brown > path {
+      fill: color("memo/brown");
+    }
+
+    .yellow > path {
+      fill: color("memo/yellow");
+    }
+
+    .mint > path {
+      fill: color("memo/mint");
+    }
+
+    .pink > path {
+      fill: color("memo/pink");
+    }
+  }
+
+  .content {
+    display: flex;
+    padding: 26px 24px 20px 24px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    letter-spacing: -1.2px;
+    word-break: break-word;
+    background: color("memo/bg");
+    @include text("Misaeng/Body1", "primary/01");
+  }
+}
