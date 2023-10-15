@@ -1,15 +1,42 @@
 @import "/src/styles/main.scss";
 
+.contentsWrapper {
+  position: relative;
+  display: grid;
+  padding: 47px 30px 150px 30px;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 58px;
+  row-gap: 49px;
+}
+
 .buttonWrapper {
   display: flex;
-  position: absolute;
-  flex-direction: column;
+  position: fixed;
+  flex-direction: row;
+  align-items: center;
   gap: 1.13rem;
+  max-width: 450px;
   width: 100%;
   bottom: 2.88rem;
+  padding: 0 30px;
 }
 
 .formWrapper {
   width: calc(100% - 5rem);
   margin: 0 auto;
+}
+
+.linkWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin: 23px 20px;
+
+  .link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: -0.8px;
+    @include text("Samlip/Title2", "grey/09");
+  }
 }
