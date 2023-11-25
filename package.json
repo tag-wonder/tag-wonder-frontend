@@ -29,16 +29,19 @@
   "dependencies": {
     "@nf-team/core": "^2.0.2",
     "@nf-team/react": "^2.4.4",
+    "@tanstack/react-query": "^5.8.7",
     "clsx": "^2.0.0",
     "next": "^14.0.3",
     "qs": "^6.11.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "zustand": "^4.4.6"
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^14.0.3",
     "@nf-team/eslint-config": "^2.1.0",
     "@svgr/webpack": "^8.1.0",
+    "@tanstack/react-query-devtools": "^5.8.7",
     "@testing-library/jest-dom": "^6.1.4",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",

@@ -1,6 +1,7 @@
 import Layout from '@/components/global/Layout';
 
 import fonts from './fonts';
+import Providers from './providers';
 
 import 'src/styles/normalize.css';
 import 'src/styles/global.scss';
@@ -16,9 +17,11 @@ function RootLayout({ children }: {
   return (
     <html lang="ko" className={fonts.miSaeng}>
       <body>
-        <Layout>
-          {children}
-        </Layout>
+        <Providers>
+          <Layout>
+            {children}
+          </Layout>
+        </Providers>
       </body>
     </html>
   );
