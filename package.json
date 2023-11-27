@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "serve": "yarn dlx serve@latest out",
+    "start": "next start",
     "lint": "eslint '**/*.{js,jsx,ts,tsx}' --fix",
     "test:unit": "jest",
     "test:watch": "jest --watch",
@@ -16,11 +16,7 @@
     "test:coverage": "yarn test:unit --coverage --passWithNoTests",
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "test:e2e": "start-server-and-test dev http://localhost:3000 cypress:run",
-    "pages:build": "npx @cloudflare/next-on-pages@1",
-    "pages:deploy": "yarn pages:build && wrangler pages deploy .vercel/output/static",
-    "pages:watch": "npx @cloudflare/next-on-pages --watch",
-    "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-date=2023-11-21 --compatibility-flag=nodejs_compat"
+    "test:e2e": "start-server-and-test dev http://localhost:3000 cypress:run"
   },
   "repository": {
     "type": "git",
