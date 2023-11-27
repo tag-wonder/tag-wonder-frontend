@@ -6,9 +6,10 @@ module.exports = {
   extends: [
     '@nf-team/eslint-config',
     'plugin:@next/next/recommended',
+    'plugin:next-on-pages/recommended',
   ],
   plugins: [
-    // set your plugins
+    'next-on-pages',
   ],
   parserOptions: {
     ecmaFeatures: {
@@ -61,6 +62,7 @@ module.exports = {
     'react/require-default-props': 'off',
     'import/order': 'off',
     '@next/next/no-html-link-for-pages': ['error', 'app/'],
+    'next-on-pages/no-unsupported-configs': 'off',
     '@typescript-eslint/no-explicit-any': 'warn',
     'simple-import-sort/imports': ['error', {
       groups: [
