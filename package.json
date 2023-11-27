@@ -17,7 +17,7 @@
     "cypress:open": "cypress open",
     "cypress:run": "cypress run",
     "test:e2e": "start-server-and-test dev http://localhost:3000 cypress:run",
-    "pages:build": "yarn dlx @cloudflare/next-on-pages",
+    "pages:build": "yarn @cloudflare/next-on-pages",
     "pages:deploy": "yarn pages:build && wrangler pages deploy .vercel/output/static",
     "pages:watch": "yarn dlx @cloudflare/next-on-pages --watch",
     "pages:dev": "yarn dlx wrangler pages dev .vercel/output/static --compatibility-date=2023-11-21 --compatibility-flag=nodejs_compat"
