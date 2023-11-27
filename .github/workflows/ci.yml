@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 env:
-  DEFAULT_NODE_VERSION: "18.16.0"
+  DEFAULT_NODE_VERSION: "18.17.1"
 
 jobs:
   continuous-integration:
