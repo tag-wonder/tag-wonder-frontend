@@ -1,9 +1,11 @@
+import { Route } from 'next';
+
 import { render, screen } from '@testing-library/react';
 
 import Button from '.';
 
 describe('Button', () => {
-  const renderButton = (url?: string) => render((
+  const renderButton = (url?: Route) => render((
     <Button href={url}>
       버튼
     </Button>
@@ -20,9 +22,9 @@ describe('Button', () => {
 
     context('링크인 경우', () => {
       it('href 속성이 존재해야만 한다', () => {
-        renderButton('/test');
+        renderButton('/login');
 
-        expect(screen.getByText('버튼')).toHaveAttribute('href', '/test');
+        expect(screen.getByText('버튼')).toHaveAttribute('href', '/login');
       });
     });
   });

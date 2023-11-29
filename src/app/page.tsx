@@ -42,7 +42,7 @@ function HomePage() {
         <Button type="button" buttonType="secondary">
           칠판 만들기
         </Button>
-        <Button type="button" buttonType="primary">
+        <Button href="/tags" buttonType="primary">
           태그 달기
         </Button>
       </div>

@@ -3,6 +3,7 @@ import {
   ButtonHTMLAttributes, HTMLProps, memo, PropsWithChildren, ReactElement, ReactNode,
 } from 'react';
 
+import { Route } from 'next';
 import Link from 'next/link';
 
 import clsx from 'clsx';
@@ -13,11 +14,12 @@ import styles from './index.module.scss';
 
 type ButtonType = 'primary' | 'secondary';
 
-interface Props extends Omit<HTMLProps<HTMLButtonElement | HTMLAnchorElement>, 'size'> {
+interface Props extends Omit<HTMLProps<HTMLButtonElement | HTMLAnchorElement>, 'size' | 'href'> {
   buttonType?: ButtonType;
   width?: `${number}px`;
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
   prefixIcon?: ReactNode;
+  href?: Route;
 }
 
 function Button({
