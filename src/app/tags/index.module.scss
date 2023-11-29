@@ -1,0 +1,46 @@
+@import "/src/styles/main.scss";
+
+.tagsMainWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 44px 30px 37px 30px;
+
+  .nameLabel {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    user-select: none;
+
+    @include text('HS/Heading1');
+
+    .labelText {  
+      @include text-color('grey/09');
+    }
+
+    .nameInput {
+      border: none;
+      background-color: transparent;
+      max-width: 85px;
+      @include text-color('primary/09');
+  
+      &::placeholder {
+        color: color('primary/09');
+      }
+    }
+  }
+
+  .description {
+    @include text('Samlip/Title2');
+
+    .infoDescription {
+      white-space: pre-line;
+
+      @include text-color('grey/09');
+    }
+
+    .boldDescription {
+      @include text-color('primary/05');
+    }
+  }
+}
