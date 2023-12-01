@@ -1,5 +1,7 @@
 import clsx from 'clsx';
 
+import Tag from '@/components/common/Tag';
+
 import fonts from '../fonts';
 
 import styles from './index.module.scss';
@@ -21,9 +23,9 @@ function TagsPage() {
         <div className={styles.boldDescription}>(3개까지 추가 가능)</div>
       </div>
       <div>
-        <div>#tag</div>
-        <div>#tag</div>
-        <div>#tag</div>
+        <Tag label="tag1" />
+        <Tag label="tag2" />
+        <Tag label="tag3" />
       </div>
     </main>
   );
