@@ -22,10 +22,13 @@ function TagsPage() {
         </div>
         <div className={styles.boldDescription}>(3개까지 추가 가능)</div>
       </div>
-      <div>
-        <Tag label="tag1" />
-        <Tag label="tag2" />
+      <div className={styles.tagsContainer}>
+        <Tag label="tag1" tagType="selected" />
+        <Tag label="tag2" tagType="checked" />
         <Tag label="tag3" />
+        <Tag label="안녕하세요안녕하세요안녕하세요" />
+        <Tag label="어쩌구저쩌구" />
+        <Tag label="잘생김" />
       </div>
     </main>
   );
