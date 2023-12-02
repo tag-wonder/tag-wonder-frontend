@@ -11,36 +11,47 @@
     flex-direction: row;
     justify-content: center;
     user-select: none;
+    letter-spacing: -1.2px;
 
-    @include text('HS/Heading1');
+    @include text("HS/Heading1");
 
-    .labelText {  
-      @include text-color('grey/09');
+    .labelText {
+      @include text-color("grey/09");
     }
 
     .nameInput {
       border: none;
+      outline: none;
       background-color: transparent;
-      max-width: 85px;
-      @include text-color('primary/09');
-  
+      max-width: 100px;
+
+      @include text-color("grey/09");
+
       &::placeholder {
-        color: color('primary/09');
+        color: color("primary/03");
       }
     }
   }
 
   .description {
-    @include text('Samlip/Title2');
+    @include text("Samlip/Title2");
 
     .infoDescription {
       white-space: pre-line;
 
-      @include text-color('grey/09');
+      @include text-color("grey/09");
     }
 
     .boldDescription {
-      @include text-color('primary/05');
+      @include text-color("primary/05");
     }
+  }
+
+  .tagsContainer {
+    display: flex;
+    flex-direction: row;
+    row-gap: 24px;
+    column-gap: 20px;
+    flex-wrap: wrap;
   }
 }

@@ -2,12 +2,49 @@
 
 .tagWrapper {
   display: flex;
+  position: relative;
   flex-direction: row;
+  max-width: fit-content;
   gap: 8px;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
   padding: 2px 12px 2px 16px;
+  letter-spacing: -1.2px;
 
-  @include text('Misaeng/Body1');
+  @include text("Misaeng/Body1");
+
+  &.default {
+    border: none;
+    color: color("primary/01");
+    background: color("memo/bg");
+  }
+
+  &.checked {
+    border: none;
+    color: color("memo/bg");
+    background: color("primary/04");
+  }
+
+  &.selected {
+    border-radius: 4px;
+    border: 1px solid color("primary/04");
+    color: color("grey/09");
+    background-color: color("primary/01");
+  }
+
+  svg.checked {
+    & > path {
+      fill: color("memo/bg");
+    }
+  }
+
+  .removeIconButton {
+    position: relative;
+    display: flex;
+    border: none;
+    background-color: transparent;
+    padding: 0px;
+    justify-content: center;
+  }
 }

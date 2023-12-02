@@ -1,3 +1,7 @@
+'use client';
+
+import clsx from 'clsx';
+
 import { CheckIcon, CloseIcon } from '@/lib/assets';
 
 import styles from './index.module.scss';
@@ -7,16 +11,19 @@ type TagType = 'default' | 'checked' | 'selected';
 type Props = {
   tagType?: TagType;
   label: string;
+  onClick?: (tagName: string) => void;
 };
 
-function Tag({ tagType = 'default', label }: Props) {
+function Tag({ tagType = 'default', label, onClick }: Props) {
   const tagLabel = `#${label}`;
+
+  const handleClick = () => onClick?.(label);
 
   if (tagType === 'selected') {
     return (
-      <div className={styles.tagWrapper}>
+      <div className={clsx(styles.tagWrapper, styles[tagType])}>
         <div>{tagLabel}</div>
-        <button type="button">
+        <button type="button" onClick={handleClick} className={styles.removeIconButton}>
           <CloseIcon />
         </button>
       </div>
@@ -24,9 +31,9 @@ function Tag({ tagType = 'default', label }: Props) {
   }
 
   return (
-    <button type="button" className={styles.tagWrapper}>
+    <button type="button" onClick={handleClick} className={clsx(styles.tagWrapper, styles[tagType])}>
       <div>{tagLabel}</div>
-      <CheckIcon />
+      <CheckIcon className={styles[tagType]} />
     </button>
   );
 }

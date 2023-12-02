@@ -105,7 +105,27 @@ a {
 button {
   cursor: pointer;
 
-  &:disabled {
+  &::after {
+    content: " ";
+    position: absolute;
+    inset: 0;
+    border-radius: 0.25rem;
+  }
+
+  &:not(:disabled):not(.disabled):after {
+    opacity: 0;
+  }
+
+  &:disabled,
+  &.disabled {
     cursor: not-allowed;
+    color: color("grey/09");
+    background-color: color("grey/07");
+    border: none;
+  }
+
+  &:not(:disabled):not(.disabled):active:after {
+    background-color: color("black");
+    opacity: 0.08;
   }
 }
