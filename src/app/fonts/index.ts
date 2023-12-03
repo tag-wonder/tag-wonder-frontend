@@ -1,14 +1,9 @@
 import localFont from 'next/font/local';
 
 const samliphopangche = localFont({
-  src: [
-    {
-      path: './SDSamliphopangcheBasic.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
+  src: './SDSamliphopangcheBasic.woff2',
   display: 'swap',
+  preload: true,
   fallback: [
     'SDSamliphopangche_Basic',
     '-apple-system',
@@ -28,14 +23,9 @@ const samliphopangche = localFont({
 });
 
 const miSaeng = localFont({
-  src: [
-    {
-      path: './SDMiSaeng.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
+  src: './SDMiSaeng.woff2',
   display: 'swap',
+  preload: true,
   fallback: [
     'SDMiSaeng',
     '-apple-system',
@@ -55,14 +45,9 @@ const miSaeng = localFont({
 });
 
 const hSYuji = localFont({
-  src: [
-    {
-      path: './HSYuji.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-  ],
+  src: './HSYuji.woff2',
   display: 'swap',
+  preload: true,
   fallback: [
     'HSYuji-Regular',
     '-apple-system',
