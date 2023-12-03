@@ -20,6 +20,7 @@ interface Props extends Omit<HTMLProps<HTMLButtonElement | HTMLAnchorElement>, '
   type?: ButtonHTMLAttributes<HTMLButtonElement>['type'];
   prefixIcon?: ReactNode;
   href?: Route;
+  fullWidth?: boolean;
 }
 
 function Button({
@@ -28,6 +29,7 @@ function Button({
   disabled,
   width,
   buttonType = 'primary',
+  fullWidth,
   prefixIcon,
   className,
   children,
@@ -37,6 +39,7 @@ function Button({
 
   const buttonClassName = clsx(fonts.samliphopangche, styles.buttonWrapper, {
     [styles[buttonType]]: buttonType,
+    [styles.fullWidth]: fullWidth,
   }, className);
 
   if (href) {
