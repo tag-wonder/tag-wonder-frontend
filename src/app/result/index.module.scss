@@ -1,0 +1,56 @@
+@import "/src/styles/main.scss";
+
+.resultWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 90px 30px;
+  width: 100%;
+  justify-content: center;
+
+  .titleWrapper {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 18px;
+    width: calc(100% - 2rem);
+    border-radius: 27.5px;
+    background-color: color('grey/01');
+    box-shadow: 3px 6px 0px color("grey/02");
+
+    .title {
+      word-break: break-all;
+      margin: 0 12px;
+      width: 100%;
+    }
+
+    @include text("Samlip/Heading2", "grey/09");
+  }
+
+  .divider {
+    height: 1px;
+    width: 100%;
+    border: 1px dashed color("primary/01");
+  }
+
+  .resultSection {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    .subTitle {
+      letter-spacing: -0.9px;
+
+      @include text("Samlip/Title1", "grey/09");
+    }
+
+    .resultContentsWrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+  }
+}
