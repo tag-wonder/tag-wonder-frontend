@@ -29,6 +29,10 @@
     font-size: var(--misaeng-body1-font-size);
     line-height: var(--misaeng-body1-line-height);
     font-weight: var(--font-weight-regular);
+  } @else if $font == "Misaeng/Title1" {
+    font-size: var(--misaeng-title1-font-size);
+    line-height: var(--misaeng-title1-line-height);
+    font-weight: var(--font-weight-regular);
   }
 
   @if $color-code {

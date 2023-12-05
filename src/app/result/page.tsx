@@ -1,5 +1,7 @@
 import clsx from 'clsx';
 
+import ResultCard from '@/components/common/ResultCard';
+
 import fonts from '../fonts';
 
 import styles from './index.module.scss';
@@ -15,9 +17,9 @@ function ResultPage() {
       <section className={styles.resultSection}>
         <h2 className={clsx(fonts.samliphopangche, styles.subTitle)}>가장 많이 적혀진 태그</h2>
         <div className={styles.resultContentsWrapper}>
-          <div>1등</div>
-          <div>2등</div>
-          <div>3등</div>
+          <ResultCard color="pink" />
+          <ResultCard color="brown" />
+          <ResultCard color="grey" />
         </div>
       </section>
       <div className={styles.divider} />

@@ -1,0 +1,117 @@
+@import "/src/styles/main.scss";
+
+.resultCardWrapper {
+  display: flex;
+  flex-direction: column;
+  background-color: color("memo/bg");
+  border-radius: 4px;
+  gap: 18px;
+  width: 100%;
+  padding: 12px 12px 36px 12px;
+  position: relative;
+
+  .cardTitleWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border-bottom: 1px dashed color("grey/08");
+
+    .titleDescription {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 26px;
+
+      .title {
+        width: 100%;
+        letter-spacing: -1.5px;
+        @include text("Misaeng/Title1", "grey/01");
+      }
+
+      .arrowButton {
+        display: flex;
+        position: relative;
+        padding: 0px;
+        border: none;
+        background-color: transparent;
+      }
+    }
+
+    .voted {
+      letter-spacing: -0.8px;
+      @include text("Samlip/Title2", "grey/04");
+    }
+
+    .optionTitle {
+      position: relative;
+      display: flex;
+      gap: 10px;
+
+      .space {
+        width: 36px;
+        display: flex;
+      }
+
+      .gradBadge {
+        z-index: 1;
+        position: absolute;
+        top: -20px;
+        border-radius: 0px 0px 18px 18px;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0px;
+          right: -10px;
+          border-width: 8px 6px 0px 4px;
+          border-style: solid;
+          border-color: transparent transparent transparent color("grey/01");
+        }
+
+        &.pink {
+          background-color: color("memo/pink");
+        }
+
+        &.brown {
+          background-color: color("memo/brown");
+        }
+
+        &.grey {
+          background-color: color("grey/01");
+        }
+
+        .grade {
+          letter-spacing: -0.9px;
+          width: 100%;
+          padding: 14px 8px 8px 8px;
+          text-align: center;
+
+          @include text("Samlip/Title1", "memo/bg");
+        }
+      }
+    }
+  }
+
+  .resultCardContents {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .voterTitle {
+      width: fit-content;
+      border-radius: 32px;
+      display: flex;
+      padding: 4px 10px;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid color("primary/02");
+      letter-spacing: -0.8px;
+      @include text("Samlip/Title2", "primary/02");
+    }
+
+    .voter {
+      letter-spacing: -0.8px;
+      @include text("Samlip/Title2", "grey/01");
+    }
+  }
+}
