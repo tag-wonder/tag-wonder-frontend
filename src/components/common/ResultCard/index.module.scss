@@ -7,14 +7,21 @@
   border-radius: 4px;
   gap: 18px;
   width: 100%;
-  padding: 12px 12px 36px 12px;
+  padding: 12px;
   position: relative;
+
+  &.open {
+    padding: 12px 12px 36px 12px;
+  }
 
   .cardTitleWrapper {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    border-bottom: 1px dashed color("grey/08");
+
+    &.open {
+      border-bottom: 1px dashed color("grey/08");
+    }
 
     .titleDescription {
       display: flex;
@@ -34,6 +41,14 @@
         padding: 0px;
         border: none;
         background-color: transparent;
+
+        .arrowIcon {
+          transform: rotate(0);
+
+          &.open {
+            transform: rotate(180deg);
+          }
+        }
       }
     }
 

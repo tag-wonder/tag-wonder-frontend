@@ -1,3 +1,7 @@
+'use client';
+
+import { checkEmpty, checkNumber } from '@nf-team/core';
+import { useBoolean } from '@nf-team/react';
 import clsx from 'clsx';
 
 import fonts from '@/app/fonts';
@@ -7,33 +11,45 @@ import { ColorType } from '@/lib/types/color';
 import styles from './index.module.scss';
 
 type Props = {
-  color: ColorType;
+  color?: ColorType;
+  grade?: number;
+  voteCount: number;
+  title: string;
+  voters: string[];
 };
 
-function ResultCard({ color }: Props) {
+function ResultCard({
+  color, grade, voteCount, title, voters,
+}: Props) {
+  const [isOpen, , , toggleOpen] = useBoolean(false);
+
   return (
-    <div className={styles.resultCardWrapper}>
-      <div className={styles.cardTitleWrapper}>
-        <div className={styles.optionTitle}>
-          <div className={clsx(styles.gradBadge, styles[color])}>
-            <div className={clsx(fonts.samliphopangche, styles.grade)}>1등</div>
+    <div className={clsx(styles.resultCardWrapper, isOpen && styles.open)}>
+      <div className={clsx(styles.cardTitleWrapper, isOpen && styles.open)}>
+        {grade && (
+          <div className={styles.optionTitle}>
+            <div className={clsx(styles.gradBadge, color && styles[color])}>
+              <div className={clsx(fonts.samliphopangche, styles.grade)}>{`${checkNumber(grade)}등`}</div>
+            </div>
+            <div className={styles.space} />
+            <div className={clsx(fonts.samliphopangche, styles.voted)}>{`${checkNumber(voteCount)}명 적음`}</div>
           </div>
-          <div className={styles.space} />
-          <div className={clsx(fonts.samliphopangche, styles.voted)}>51명 적음</div>
-        </div>
+        )}
         <div className={styles.titleDescription}>
-          <div className={styles.title}>안녕하세요안녕하세요안녕하세요</div>
-          <button className={styles.arrowButton} type="button">
-            <ArrowIcon />
+          <div className={styles.title}>{`${title}${grade ? '' : `(${checkNumber(voteCount)})`}`}</div>
+          <button className={styles.arrowButton} type="button" onClick={() => toggleOpen()}>
+            <ArrowIcon className={clsx(styles.arrowIcon, isOpen && styles.open)} />
           </button>
         </div>
       </div>
-      <div className={clsx(fonts.samliphopangche, styles.resultCardContents)}>
-        <div className={styles.voterTitle}>태그 적은 사람</div>
-        <div className={styles.voter}>
-          사승민, 안정균, 한채영,어쩌고,저쩌고,어쩌고저쩌고,블라블라,
+      {isOpen && (
+        <div className={clsx(fonts.samliphopangche, styles.resultCardContents)}>
+          <div className={styles.voterTitle}>태그 적은 사람</div>
+          <div className={styles.voter}>
+            {checkEmpty(voters).join(', ')}
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }
