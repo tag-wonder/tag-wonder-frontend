@@ -1,10 +1,25 @@
+'use client';
+
 import Image from 'next/image';
 
+import { useQuery } from '@tanstack/react-query';
+
+import api from '@/app/api';
 import Button from '@/components/common/Button';
 
 import styles from './index.module.scss';
 
 function SocialButtonGroup() {
+  const { data } = useQuery({
+    queryKey: ['test'],
+    queryFn: () => api({
+      url: '/tags',
+      isBFF: false,
+    }),
+  });
+
+  console.log(data);
+
   return (
     <div className={styles.socialButtonGroup}>
       <Button
